@@ -2,37 +2,11 @@ let btnText = ["Candidatar", "Remover candidatura"];
 let jobsUl = document.querySelector(".jobs-wrapper");
 let appliedUl = document.querySelector(".applied-jobs-wrapper");
 
-
-const database = [
-   {
-     id: 0,
-     title: "Pessoa desenvolvedora front-end - React",
-     enterprise: "Kenzie",
-     location: "Curitiba",
-     description:
-       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-     modalities: ["Hibrido", "Presencial"],
-   },
-   {
-     id: 1,
-     title: "Pessoa desenvolvedora back-end - Node JS",
-     enterprise: "Brazilians in Tech",
-     location: "Rio de Janeiro",
-     description:
-       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-     modalities: ["Home Office", "Presencial"],
-   },
-   {
-     id: 2,
-     title: "Pessoa desenvolvedora Fullstack - Node JS",
-     enterprise: "Brazilians in Tech",
-     location: "Rio de Janeiro",
-     description:
-       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-     modalities: ["Home Office", "Presencial"],
-   },
- ];
- 
+if(!localStorage.appliedJobs) {
+   let arr = []
+   newArr = JSON.stringify(arr)
+   localStorage.setItem('appliedJobs', newArr)
+}
 
 function state(dataArr) {
   let value = dataArr;
@@ -48,7 +22,7 @@ function state(dataArr) {
   return [getValue, setValue];
 }
 
-const [getJobs, setJobs] = state(database);
+const [getJobs, setJobs] = state(jobsData);
 
 const [getApplied, setApplied] = state([]);
 
