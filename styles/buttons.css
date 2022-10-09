@@ -18,7 +18,16 @@
 .job-btns-wrapper {
    display: flex;
    width: 100%;
+   align-items: center;
    justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 36px;
+}
+
+.job-type-btn-wrapper {
+   display: flex;
+   height: fit-content;
+   gap: 20px;
 }
 
 .job-type-btn {
@@ -45,4 +54,33 @@
 
 .job-apply-btn:hover {
    background-color: var(--color-brand-2);
+}
+
+.applied-job-remove-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 45px;
+   height: 38px;
+   border-radius: var(--radius-default);
+   background-color: var(--color-grey-5);
+   border: 2px solid var(--color-grey-5);
+   cursor: pointer;
+   transition: ease 0.3s;
+}
+
+.applied-job-remove-btn:hover {
+   background-color: var(--color-grey-3);
+   border: 2px solid var(--color-grey-3);
+}
+
+.applied-job-remove-img {
+   height: 14px;
+   pointer-events: none;
+}
+
+@media(max-width:700px) {
+   .job-apply-btn {
+      min-width: 100%;
+   }
 }

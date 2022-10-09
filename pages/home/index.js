@@ -107,41 +107,46 @@ function createLi(element) {
   let spanA = document.createElement("span");
   let spanB = document.createElement("span");
   let h2 = document.createElement("h2");
-  let div = document.createElement("div");
+  let divA = document.createElement("div");
+  let divB = document.createElement("div");
   let pA = document.createElement("p");
   let pB = document.createElement("p");
   let pC = document.createElement("p");
   let btnA = document.createElement("button");
   let btnB = document.createElement("button");
+  let btnC = document.createElement("button");
 
   li.classList.add("job-card");
   spanA.classList.add("job-title-wrapper");
   spanB.classList.add("job-btns-wrapper");
   h2.classList.add("job-title");
-  div.classList.add("job-company-wrapper");
+  divA.classList.add("job-company-wrapper");
+  divB.classList.add("job-type-btn-wrapper");
   pA.classList.add("job-company");
   pB.classList.add("job-location");
   pC.classList.add("job-description");
   btnA.classList.add("job-type-btn");
-  btnB.classList.add("job-apply-btn");
+  btnB.classList.add("job-type-btn");
+  btnC.classList.add("job-apply-btn");
 
   h2.innerText = element.title;
   pA.innerText = element.enterprise;
   pB.innerText = element.location;
   pC.innerText = element.description;
   btnA.innerText = element.modalities[0];
-  btnB.innerText = btnText[0];
+  btnB.innerText = element.modalities[1];
+  btnC.innerText = btnText[0];
   li.id = element.id;
 
   let newArr = JSON.parse(localStorage.getItem("appliedJobs"));
 
   newArr.forEach((item) => {
     if (item.id === element.id) {
-      btnB.innerText = btnText[1];
+      btnC.innerText = btnText[1];
     }
   });
 
-  btnB.addEventListener("click", (event) => {
+  btnC.addEventListener("click", (event) => {
     let targetId = parseInt(event.target.parentNode.parentElement.id);
     if (event.target.innerText === btnText[0]) {
       addAppliedJobs(targetId);
@@ -151,12 +156,14 @@ function createLi(element) {
     }
   });
 
-  spanB.appendChild(btnA);
-  spanB.appendChild(btnB);
-  div.appendChild(pA);
-  div.appendChild(pB);
+  divB.appendChild(btnA)
+  divB.appendChild(btnB)
+  spanB.appendChild(divB);
+  spanB.appendChild(btnC);
+  divA.appendChild(pA);
+  divA.appendChild(pB);
   spanA.append(h2);
-  spanA.append(div);
+  spanA.append(divA);
   li.appendChild(spanA);
   li.appendChild(pC);
   li.appendChild(spanB);

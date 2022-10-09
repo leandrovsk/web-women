@@ -124,6 +124,8 @@ header {
    height: fit-content;
    background-color: var(--color-grey-6);
    border-radius: var(--radius-default);
+   position: sticky;
+   top: 32px;
 }
 
 .applied-jobs-section-title {
@@ -231,6 +233,11 @@ header {
    border-bottom: 2px solid var(--color-grey-5);
    background-color: var(--color-grey-6);
    padding: 32px;
+   transition: 0.3s ease;
+}
+
+.applied-job:hover {
+   background-color: var(--color-grey-4);
 }
 
 .applied-job-title-container {
@@ -245,23 +252,6 @@ header {
    color: var(--color-grey-1);
    font-weight: 600;
    line-height: 27px;
-}
-
-.applied-job-remove-btn {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 45px;
-   height: 38px;
-   border-radius: var(--radius-default);
-   background-color: var(--color-grey-5);
-   border: 2px solid var(--color-grey-5);
-   cursor: pointer;
-}
-
-.applied-job-remove-img {
-   height: 14px;
-   pointer-events: none;
 }
 
 .applied-job-desc-container {
