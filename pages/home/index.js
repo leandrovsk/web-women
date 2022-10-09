@@ -3,7 +3,7 @@ let jobsUl = document.querySelector(".jobs-wrapper");
 let appliedUl = document.querySelector(".applied-jobs-wrapper");
 
 
-const jobsData = [
+const database = [
    {
      id: 0,
      title: "Pessoa desenvolvedora front-end - React",
@@ -48,7 +48,7 @@ function state(dataArr) {
   return [getValue, setValue];
 }
 
-const [getJobs, setJobs] = state(jobsData);
+const [getJobs, setJobs] = state(database);
 
 const [getApplied, setApplied] = state([]);
 
