@@ -1,0 +1,48 @@
+.to-jobs-btn {
+   padding: 12px 50px;
+   background-color: var(--color-brand-1);
+   border-radius: var(--radius-default);
+   border: 0;
+   width: fit-content;
+   color: var(--color-grey-6);
+   font-size: var(--text-2);
+   font-weight: 500;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+
+.to-jobs-btn:hover {
+   background-color: var(--color-brand-2);
+}
+
+.job-btns-wrapper {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+}
+
+.job-type-btn {
+   padding: 4px 12px;
+   border-radius: var(--radius-default);
+   background-color: var(--color-grey-3);
+   border: none;
+   color: var(--color-grey-2);
+   font-size: var(--text-3);
+   font-weight: 400;
+}
+
+.job-apply-btn {
+   padding: 7px 28px;
+   background-color: var(--color-brand-1);
+   border: 2px solid var(--color-brand-1);
+   border-radius: var(--radius-default);
+   color: var(--color-grey-6);
+   font-size: var(--text-2);
+   line-height: 24px;
+   font-weight: 500;
+   cursor: pointer;
+}
+
+.job-apply-btn:hover {
+   background-color: var(--color-brand-2);
+}

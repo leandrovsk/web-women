@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/globalStyles.css" />
+    <link rel="stylesheet" href="/pages/home/index.css" />
+    <link rel="stylesheet" href="/styles/buttons.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Webwomen</title>
+    <meta
+      name="description"
+      content="Está procurando oportunidades de estágio, emprego ou bolsas de estudo? 
+      Ou até mesmo oportunidades para atender eventos de tecnologia no Brasil 
+      e ao redor do mundo?"
+    />
+  </head>
+  <body>
+    <header>
+      <figure class="banner-wrapper">
+        <img src="/assets/img/banner.jpg" alt="banner" class="banner" />
+      </figure>
+      <span class="banner-desc-wrapper">
+        <section class="middle-desc-wrapper container">
+          <figure class="banner-logo">
+            <img src="/assets/img/logo.svg" alt="logo" class="logo" />
+          </figure>
+          <span class="text-desc">
+            <h1 class="banner-title">Lugar de mulher é onde ela quiser!</h1>
+            <p class="banner-desc">
+              Está procurando oportunidades de estágio, emprego ou bolsas de
+              estudo? <br />
+              Ou até mesmo oportunidades para atender eventos de tecnologia no
+              Brasil e ao redor do mundo?
+            </p>
+            <p class="banner-desc-em">
+              Confere aqui embaixo o que temos pra você!
+            </p>
+          </span>
+          <a href="#main"
+            ><button class="to-jobs-btn">Ir para seção das vagas</button></a
+          >
+        </section>
+      </span>
+    </header>
+    <main class="main" id="main">
+      <section class="container-section container">
+        <h2 class="main-title">Vagas</h2>
+        <section class="main-section">
+          <aside class="jobs-section">
+            <ul class="jobs-wrapper"></ul>
+          </aside>
+          <aside class="applied-jobs">
+            <h2 class="applied-jobs-section-title">Vagas selecionadas</h2>
+            <ul class="applied-jobs-wrapper"></ul>
+          </aside>
+        </section>
+      </section>
+    </main>
+    <script src="/pages/home/jobsData.js"></script>
+    <script src="/pages/home/index.js"></script>
+  </body>
+</html>
